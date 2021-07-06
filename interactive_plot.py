@@ -36,7 +36,7 @@ class interactive_plot:
         
         # Change color (make sure there's always only one point in red)
         plt.scatter(self.currently_playing[0], self.currently_playing[1], c=self.color_idle)
-        plt.show()
+        plt.draw()
 
         # find index that matches the clicked position and play the corresponding sound
         point_dist = np.sqrt((self.x - x_data)**2 + (self.y - y_data)**2 ) # distance between ploted points and click location
@@ -49,12 +49,12 @@ class interactive_plot:
 
         # Change color 
         plt.scatter(self.currently_playing[0], self.currently_playing[1], c=self.color_play)
-        plt.show()
+        plt.draw()
 
     def on_key(self, event):
         sd.stop(self.playing_audio)
         plt.scatter(self.currently_playing[0], self.currently_playing[1], c=self.color_idle)
-        plt.show()
+        plt.draw()
 
     def disconnect(self):
         """Disconnect all callbacks."""
