@@ -4,7 +4,6 @@
 # %% 
 from clustering import load_and_preprocess, tsne_cluster
 from interactive_plot import interactive_plot
-import numpy as np 
 
 def process():
     # Load and generate clusters

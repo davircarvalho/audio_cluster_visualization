@@ -3,12 +3,6 @@ import numpy as np
 from operator import itemgetter
 import sounddevice as sd
 
-# fig = plt.figure()
-# fig.canvas.mpl_connect('button_press_event', onclick)
-# fig.canvas.mpl_connect('key_press_event', onkey)
-# drawInitial()
-# plt.show()
-
 class interactive_plot:
     def __init__(self, x, y, data, sr):
         self.x = x              # List of x coordinates of clustered samples

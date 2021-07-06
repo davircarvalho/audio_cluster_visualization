@@ -2,7 +2,6 @@
 Clustering audios dataset CM via TSNE   
 '''
 
-
 # %% Import Libs
 import os 
 import librosa
@@ -35,7 +34,7 @@ def load_and_preprocess(path_in):
 
 # %% Learning 
 def tsne_cluster(data):
-    model = TSNE(learning_rate=50, random_state=0, n_components=2, perplexity=51, n_iter=5000)
+    model = TSNE(learning_rate=50, random_state=42, n_components=2, perplexity=50, n_iter=1000)
     transformed =model.fit_transform(data)
     xs = transformed[:,0]
     ys = transformed[:,1]
